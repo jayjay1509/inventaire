@@ -13,4 +13,8 @@ public:
 
     void dispay();
 
+    const std::vector<Item*>& getInventaire() const {
+        return InventaireJoueur;
+    }
+
 };

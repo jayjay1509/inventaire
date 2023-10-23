@@ -12,6 +12,7 @@ void Inventaire::dispay()
 {
 	for (int i = 0; i < InventaireJoueur.size(); i++)
 	{
-		std::cout <<InventaireJoueur[i]->tostring() <<"\n";
+		std::cout << "[" << i+1 << "]" <<InventaireJoueur[i]->tostring() <<"\n";
 	}
 }
+

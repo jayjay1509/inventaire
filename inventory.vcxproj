@@ -130,10 +130,11 @@
     <ClCompile Include="ForcePotion.cpp" />
     <ClCompile Include="HealthPotion.cpp" />
     <ClCompile Include="Inventaire.cpp" />
-    <ClCompile Include="inventory.cpp" />
     <ClCompile Include="Item.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="map.cpp" />
     <ClCompile Include="Potion.cpp" />
+    <ClCompile Include="Tools.cpp" />
     <ClCompile Include="Weapon.cpp" />
     <ClCompile Include="WeaponBow.cpp" />
     <ClCompile Include="WeaponSword.cpp" />
@@ -145,6 +146,7 @@
     <ClInclude Include="Item.h" />
     <ClInclude Include="map.h" />
     <ClInclude Include="Potion.h" />
+    <ClInclude Include="Tools.h" />
     <ClInclude Include="Weapon.h" />
     <ClInclude Include="WeaponBow.h" />
     <ClInclude Include="WeaponSword.h" />

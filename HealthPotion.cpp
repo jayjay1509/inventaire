@@ -6,7 +6,7 @@ void HealthPotion::Use()
 
 std::string HealthPotion::tostring()
 {
-	return (NameForItem + "la qualite: " + std::to_string(QualitePotion) + "le nombre de hp recupere " + std::to_string(HP));
+	return (NameForItem + " la qualite: " + std::to_string(QualitePotion) + " le nombre de hp recupere est de  " + std::to_string(HP));
 }
 
 
