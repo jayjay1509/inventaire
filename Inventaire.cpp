@@ -3,9 +3,10 @@
 #include <iostream>
 
 
-void Inventaire::push(Item& item)
+
+void Inventaire::push(Item* item)
 {
-	InventaireJoueur.push_back(&item);
+	InventaireJoueur.push_back(item);
 }
 
 void Inventaire::dispay()

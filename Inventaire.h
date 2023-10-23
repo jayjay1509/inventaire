@@ -9,7 +9,7 @@ class Inventaire
 public:
     std::vector<Item*> InventaireJoueur;
 
-    void push(Item& item);
+    void push(Item* item);
 
     void dispay();
 

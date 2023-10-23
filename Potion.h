@@ -13,7 +13,7 @@ public:
 
 	std::string qualiteString(int QualitePotion);
 
-	int getQualitepotion() const override;
+	int getQualite() const override;
 
 
 };

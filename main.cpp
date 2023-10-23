@@ -7,6 +7,8 @@
 #include "map.h"
 #include <nlohmann/json.hpp>
 #include "Inventaire.h"
+#include "WeaponBow.h"
+#include "WeaponSword.h"
 
 
 using json = nlohmann::json;
@@ -27,56 +29,58 @@ int main()
         for (const json& itemJSON : inventaireJoueurJSON) {
             std::string nom = itemJSON["nom"].get<std::string>();
             int qualitePotion = itemJSON["Qualitepotion"];
-            int hp = itemJSON["hp"];
+            int Value = itemJSON["Value"];
             int type = itemJSON["type"];
+            
 
             if (type == 1) {
-                std::string nomPotion = nom.empty() ? "Potion de guérison" : nom;
-                HealthPotion potion(nomPotion, qualitePotion, hp);
-                joueur.push(potion);
+                joueur.push(new HealthPotion(nom, qualitePotion, Value));
+            }
+            if (type == 2) {
+                joueur.push(new ForcePotion(nom, qualitePotion, Value));
+            }
+            if (type == 3) {
+                joueur.push(new WeaponBow(nom, qualitePotion, Value));
+            }
+            if (type == 4) {
+                joueur.push(new WeaponSword(nom, qualitePotion, Value));
+            }
+            if (type == 5) {
+                joueur.push(new map(nom));
             }
         }
     }
-
-
-
-
-
  
 
-    std::cout << "Bonjour, veuillez sélectionner un item dans l'inventaire :\n";
+    std::cout << "Bonjour, veuillez selectionner un item dans l'inventaire :\n";
 
-    HealthPotion potionHealth1("potion de soin", 1, 10);
-    HealthPotion potionHealth2("potion de soin 1", 14, 20);
-    joueur.push(potionHealth1);
-    joueur.push(potionHealth2);
-
-
+    joueur.push(new HealthPotion ("potion de soin ", 2, 25));
+    joueur.push(new ForcePotion ("potion de force  ", 1, 10));
+    joueur.push(new WeaponSword("epee de la mort", 1, 25));
+    joueur.push(new WeaponSword("Arc de la mort", 1, 30));
+    joueur.push(new map("maps de ou est ta mere "));
 
     joueur.dispay();
 
-  
-    json inventaireJoueurJSON;
+    json data;
+    json inventaireJoueurJSON; 
 
     for (const auto& item : joueur.getInventaire()) {
         json itemJSON;
         itemJSON["type"] = item->getType();
-        itemJSON["nom"] = item->getNom().c_str();
-        itemJSON["Qualitepotion"] = item->getQualitepotion();
-        itemJSON["hp"] = item->gethp();
+        itemJSON["nom"] = item->getNom();
+        itemJSON["Qualitepotion"] = item->getQualite();
+        itemJSON["Value"] = item->getValue();
         inventaireJoueurJSON.push_back(itemJSON);
+
     }
 
-    
-
-   
+    data["InventaireJoueur"] = inventaireJoueurJSON;
 
 
-    
-    j["InventaireJoueur"] = inventaireJoueurJSON;
 
     std::ofstream o("datas.json");
-    o << std::setw(4) << j << std::endl;
+    o << std::setw(4) << data << std::endl;
     o.close();
 
     return 0;

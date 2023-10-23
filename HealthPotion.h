@@ -1,11 +1,11 @@
 #pragma once
-#include <iostream>
 
 #include "Potion.h"
 class HealthPotion : public Potion
 {
 	int HP;
 	int Type = 1;
+
 public:
 	HealthPotion(std::string NameForItem, int QualitePotion, int hp) : Potion(NameForItem, QualitePotion), HP(hp) {}
 
@@ -13,14 +13,15 @@ public:
 	std::string tostring();
 
     
-    int gethp() const {
+    int getValue() const
+	{
         return HP;
     }
 
-	int getType() const {
+	int getType() const
+	{
 		return Type;
 	}
-
 
 
 };

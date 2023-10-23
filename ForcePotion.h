@@ -10,8 +10,9 @@ public:
 	ForcePotion(std::string NameForItem, int QualitePotion,int att) : Potion(NameForItem,QualitePotion),Att(att){}
 
 	void Use();
+	std::string tostring();
 
-	int getAtt() const {
+	int getValue() const {
 		return Att;
 	}
 
@@ -19,8 +20,5 @@ public:
 		return Type;
 	}
 
-	std::string getNom() const {
-		return NameForItem;
-	}
 };
 
