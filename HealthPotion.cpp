@@ -1,12 +1,13 @@
 #include "HealthPotion.h"
-void HealthPotion::Use()
-{
-	std::cout << "La potion me donne " << HP << "Hp" << std::endl;
+
+// Method to use the health potion. This method displays the amount of health points (HP) recovered by drinking the potion.
+void HealthPotion::Use() {
+    // Assuming you have a 'playerhealth' variable to represent the player's health.
+    // playerhealth += HP;
+    std::cout << "You have consumed the health potion and recovered " << HP << " hit points." << std::endl;
 }
 
-std::string HealthPotion::tostring()
-{
-	return (NameForItem + " la qualite: " + std::to_string(QualitePotion) + " le nombre de hp recupere est de  " + std::to_string(HP));
+// Method to obtain a textual representation of the health potion. It includes the name, quality, and HP value.
+std::string HealthPotion::tostring() {
+    return (NameForItem + " Quality: " + std::to_string(QualitePotion) + " HP recovered: " + std::to_string(HP));
 }
-
-

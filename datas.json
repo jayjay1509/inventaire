@@ -1,0 +1,58 @@
+{
+    "InventaireJoueur": [
+        {
+            "Qualitepotion": 2,
+            "Value": 25,
+            "nom": "potion de soin ",
+            "type": 1
+        },
+        {
+            "Qualitepotion": 1,
+            "Value": 10,
+            "nom": "potion de force  ",
+            "type": 2
+        },
+        {
+            "Qualitepotion": 1,
+            "Value": 25,
+            "nom": "epee de la mort",
+            "type": 4
+        },
+        {
+            "Qualitepotion": 1,
+            "Value": 30,
+            "nom": "Arc de la mort",
+            "type": 3
+        },
+        {
+            "Qualitepotion": 0,
+            "Value": 0,
+            "nom": "maps de ou est ta mere ",
+            "type": 5
+        },
+        {
+            "Qualitepotion": 2,
+            "Value": 25,
+            "nom": "potion de soin ",
+            "type": 1
+        },
+        {
+            "Qualitepotion": 1,
+            "Value": 10,
+            "nom": "potion de force  ",
+            "type": 2
+        },
+        {
+            "Qualitepotion": 2,
+            "Value": 25,
+            "nom": "potion de soin ",
+            "type": 1
+        },
+        {
+            "Qualitepotion": 1,
+            "Value": 10,
+            "nom": "potion de force  ",
+            "type": 2
+        }
+    ]
+}

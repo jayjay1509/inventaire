@@ -1,10 +1,11 @@
 #include "WeaponSword.h"
-void WeaponSword::Use()
-{
-	std::cout << "La sword a " << Att << "d'attack " << std::endl;
+
+// Implementation of the 'Use' method for the sword weapon.
+void WeaponSword::Use() {
+    std::cout << "The sword has " << Att << " attack." << std::endl;
 }
 
-std::string WeaponSword::tostring()
-{
-	return (NameForItem + " la qualite: " + std::to_string(QualiteWeapon) + " le nombre de hp recupere est de  " + std::to_string(Att));
+// Implementation of the 'tostring' method to represent the sword as a string.
+std::string WeaponSword::tostring() {
+    return (NameForItem + " quality: " + std::to_string(QualiteWeapon) + " and provides " + std::to_string(Att) + " attack points.");
 }

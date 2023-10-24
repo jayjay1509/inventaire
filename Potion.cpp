@@ -1,13 +1,11 @@
 #include "Potion.h"
 
-
-void Potion::Use()
-{
-	std::cout << "La potion a une qualite de  " << QualitePotion << std::endl;
+// Implementation of the 'Use' method for potions.
+void Potion::Use() {
+    std::cout << "The potion has a quality of " << QualitePotion << std::endl;
 }
 
-int Potion::getQualite() const
-{
+// Implementation of the 'getQualite' method to retrieve the quality of a potion.
+int Potion::getQualite() const {
     return QualitePotion;
 }
-

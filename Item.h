@@ -1,33 +1,41 @@
 #pragma once
+
 #include <string>
 #include <nlohmann/json.hpp>
-enum class Qualite
-{
-	Commun,
-	rare,
-	Epic
+
+// Enumeration to represent the quality of the item.
+enum class Qualite {
+    Common,
+    Rare,
+    Epic
 };
-class Item
-{
+
+class Item {
 protected:
-	std::string NameForItem;
+    std::string NameForItem;  // Name of the item.
+
 public:
-	Item(std::string NameForItem) : NameForItem(NameForItem) {};
+    // Constructor for the Item class, taking the name of the item as a parameter.
+    Item(std::string NameForItem) : NameForItem(NameForItem) {};
 
-	virtual void Use() = 0;
-	virtual  std::string tostring() = 0;
-	virtual int getQualite() const = 0;
-	virtual int getValue() const = 0;
-	virtual int getType() const = 0;
-	
+    // Pure virtual method to use the item (must be implemented in subclasses).
+    virtual void Use() = 0;
 
-	std::string getNom() const
-	{
-		return NameForItem;
-	}
-	
+    // Pure virtual method to obtain a textual representation of the item (must be implemented in subclasses).
+    virtual std::string tostring() = 0;
+
+    // Pure virtual method to obtain the quality of the item (must be implemented in subclasses).
+    virtual int getQualite() const = 0;
+
+    // Pure virtual method to obtain the value of the item (must be implemented in subclasses).
+    virtual int getValue() const = 0;
+
+    // Pure virtual method to obtain the type of the item (must be implemented in subclasses).
+    virtual int getType() const = 0;
+
+    // Method to get the name of the item.
+    std::string getNom() const {
+        return NameForItem;
+    }
 };
-
-
-
 
