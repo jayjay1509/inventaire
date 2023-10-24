@@ -26,15 +26,15 @@ This is a simple C++ project that demonstrates an inventory management system. P
 
 ## Getting Started
 
-1. Clone this repository to your local machine: 
+1. Clone this repository to your local machine:.
 git clone https://github.com/your-username/inventory-management.git
 
 
-2. Build the project using your C++ compiler: 
+2. Build the project using your C++ compiler:.
 g++ -o main main.cpp -std=c++11
 
 
-3. Run the executable: 
+3. Run the executable:.
 ./main
 
 
